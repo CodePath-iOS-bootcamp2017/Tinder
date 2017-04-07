@@ -37,7 +37,7 @@
                         <outlet property="actionsImageView" destination="6J4-aO-2th" id="S4j-00-a7l"/>
                         <outlet property="cardImageView" destination="wyH-sa-kTy" id="Jfa-AJ-JAN"/>
                         <outlet property="navBarImageView" destination="3D4-bQ-pAC" id="6gj-ub-2ed"/>
-                        <segue destination="Aqv-jo-Ugk" kind="modal" identifier="showProfile" animates="NO" id="m8G-lb-vEb"/>
+                        <segue destination="Aqv-jo-Ugk" kind="modal" identifier="showProfile" id="m8G-lb-vEb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

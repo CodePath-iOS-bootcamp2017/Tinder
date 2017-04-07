@@ -15,6 +15,7 @@ class CardsViewController: UIViewController {
     @IBOutlet weak var actionsImageView: UIImageView!
     
     var cardInitialCenter: CGPoint!
+    var fadeTransition: FadeTransition!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,6 +93,13 @@ class CardsViewController: UIViewController {
         if segue.identifier == "showProfile" {
             let vc = segue.destination as! ProfileViewController
             vc.profileImage = self.cardImageView.image
+            
+            //custom modal presentation
+            vc.modalPresentationStyle = UIModalPresentationStyle.custom
+            fadeTransition = FadeTransition()
+            vc.transitioningDelegate = fadeTransition
+            fadeTransition.duration = 0.5
+            
         }
     }
     

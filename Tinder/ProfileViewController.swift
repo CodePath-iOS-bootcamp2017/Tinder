@@ -29,7 +29,7 @@ class ProfileViewController: UIViewController {
     }
     
     func didTap(_ sender: UITapGestureRecognizer){
-        dismiss(animated: false, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
