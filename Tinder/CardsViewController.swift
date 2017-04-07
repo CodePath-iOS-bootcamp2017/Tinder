@@ -31,6 +31,10 @@ class CardsViewController: UIViewController {
         let panGesture = UIPanGestureRecognizer()
         panGesture.addTarget(self, action: #selector(didPanCard(_:)))
         self.cardImageView.addGestureRecognizer(panGesture)
+        
+        let tapGesture = UITapGestureRecognizer()
+        tapGesture.addTarget(self, action: #selector(didTapCard(_:)))
+        self.cardImageView.addGestureRecognizer(tapGesture)
     }
     
     override func didReceiveMemoryWarning() {
@@ -38,6 +42,9 @@ class CardsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func didTapCard(_ sender: UITapGestureRecognizer){
+        performSegue(withIdentifier: "showProfile", sender: sender)
+    }
     
     func didPanCard(_ sender: UIPanGestureRecognizer) {
         if let cardImage = sender.view as? UIImageView{
@@ -77,14 +84,16 @@ class CardsViewController: UIViewController {
         
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "showProfile" {
+            let vc = segue.destination as! ProfileViewController
+            vc.profileImage = self.cardImageView.image
+        }
     }
-    */
+    
 
 }

@@ -37,16 +37,46 @@
                         <outlet property="actionsImageView" destination="6J4-aO-2th" id="S4j-00-a7l"/>
                         <outlet property="cardImageView" destination="wyH-sa-kTy" id="Jfa-AJ-JAN"/>
                         <outlet property="navBarImageView" destination="3D4-bQ-pAC" id="6gj-ub-2ed"/>
+                        <segue destination="Aqv-jo-Ugk" kind="modal" identifier="showProfile" animates="NO" id="m8G-lb-vEb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="73.5" y="137.5"/>
         </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="MAM-Ls-AVC">
+            <objects>
+                <viewController id="Aqv-jo-Ugk" customClass="ProfileViewController" customModule="Tinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DBf-q6-70h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="nav_bar2" id="YcI-sB-e9J">
+                                <rect key="frame" x="0.0" y="20" width="375" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="SlW-sT-lXo">
+                                <rect key="frame" x="0.0" y="91" width="375" height="369"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="navBarImageView" destination="YcI-sB-e9J" id="pra-cf-Axp"/>
+                        <outlet property="profileImageView" destination="SlW-sT-lXo" id="Hhb-Uf-1pG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="83v-wD-xmA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="599.5" y="137.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="action_buttons" width="320" height="108"/>
         <image name="nav_bar" width="320" height="65"/>
+        <image name="nav_bar2" width="320" height="65"/>
         <image name="ryan" width="449" height="514"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
